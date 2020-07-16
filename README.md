@@ -1,5 +1,7 @@
 # Contains code for a new computer setup for programming
 
+See [Computer_setup_Programming.pdf](./Computer_setup_programming.pdf) for full setup.
+
 ## Shorten terminal path and add git information
 Copy [git-completion.bash](./git-completion.bash) and add it to home folder or another suitable place. The file [bashrc_shorten_path_git](./bashrc_shorten_path_git) assumes that the file is located in the home folder as `~/git-completion.bash`, first row must be changed if placed at another location or if named differently.
 
