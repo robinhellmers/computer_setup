@@ -14,3 +14,5 @@ else
 fi
 unset color_prompt force_color_prompt
 ```
+
+Restart terminal/bash
