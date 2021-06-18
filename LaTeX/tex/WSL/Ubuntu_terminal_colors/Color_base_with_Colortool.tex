@@ -1,0 +1,22 @@
+\subsubsection{Basic colors with Colortool}\label{sec:color_basic}
+Colors in the Ubuntu App can be bad. Microsoft have released \texttt{ColorTool} to fix this. See the link below:
+
+\url{https://github.com/microsoft/terminal/tree/master/src/tools/ColorTool}
+
+Further down, \texttt{README.md} should have a title \textbf{Installing} with a link to the latest \texttt{ColorTool} release, with a built \texttt{.exe} file and a \texttt{schemes} directory. Here is the current one upon writing this:
+
+\url{https://github.com/microsoft/terminal/releases/tag/1904.29002}
+
+I currently use the \texttt{solarized\_dark.itermcolors} scheme with some additional manual adjustment in properties, described in section \ref{sec:colors_manually}.
+
+\begin{enumerate}
+    \item Download the \texttt{zip} file.
+    \item Open \texttt{Command Prompt} in Windows.
+    \item Write \code{PATH} or \code{echo \%PATH\%} if that doesn't work, to see the different paths.
+    \item Find a suitable location, such as \code{C:\textbackslash Users\textbackslash Robin.Hellmers\textbackslash AppData\textbackslash Local\textbackslash Microsoft\textbackslash WindowsApps}, to unzip the files. Unzip them.
+    \item Open \texttt{Command prompt} at the very same directory.
+    \item Check the \texttt{schemes} directory for the names of the different schemes e.g. \texttt{campbell.ini}, \texttt{OneHalfDark.itermcolors}, ...
+    \item In the \texttt{cmd}, run \code{ColorTool -b \{scheme\}} e.g. \code{ColorTool -b solarized\_dark.itermcolors}.
+    \item Restart the Ubuntu app and the color scheme is applied.
+\end{enumerate}
+

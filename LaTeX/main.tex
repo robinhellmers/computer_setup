@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage[shortlabels]{enumitem}
+
+
+%%% subsubsubsection %%%
+\usepackage{titlesec}
+\input{tex/extra_latex/subsubsubsectioning}
+%%% ---------------- %%%
+
+%%% Codes %%%
+\usepackage{color}
+\usepackage{minted}                  
+    \definecolor{bg}{rgb}{0.97,0.97,0.97}
+    
+\definecolor{codegray}{gray}{0.9}
+\newcommand{\code}[1]{\colorbox{codegray}{\texttt{#1}}}
+%%% ----- %%%
+\usepackage{bold-extra}
+    \newcommand{\tttbf}[1]{\texttt{\textbf{#1}}} % requires package bold-extra
+\usepackage{textcomp}
+    \newcommand{\textapprox}{\raisebox{0.5ex}{\texttildelow}}
+
+\DeclareMathOperator*{\argmin}{argmin}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
+
+\newcommand{\ra}{\(\,\to\,\)}
+
+
+
+\title{Computer Setup Programming}
+\author{Robin Hellmers}
+
+\begin{document}
+
+
+
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\input{tex/WSL/WSL}
+\newpage
+\input{tex/Virtual_machine/Virtual_machine}
+\newpage
+\input{tex/Python}
+\input{tex/Extra}
+
+%\input{tex/Appendix.tex}
+
+\end{document}
+

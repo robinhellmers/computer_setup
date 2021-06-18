@@ -1,0 +1,135 @@
+\subsection{WSL Ubuntu installations} \label{sec:wsl_ubuntu_installations}
+
+Start with:
+
+\code{sudo apt update}
+
+% --------------------------------------------------------------
+% --------------------------------------------------------------
+% --------------------------------------------------------------
+\subsubsection{Terminal bookmark directories}
+Install \texttt{Apparix} (Doc. \url{https://www.micans.org/apparix/}) with\\
+\code{sudo apt-get install apparix}
+
+Run \code{apparix} in order for it to set up its folders.
+
+Then write \code{apparix --shell-examples} and copy everything except the aliases at the bottom. Paste this in \texttt{~/.bashrc}
+
+If just copying from the terminal and pasting into \texttt{~/.bashrc} doesn't work, create a file and let the output be written into that instead in order to copy from it.
+
+\code{touch text.txt}
+
+\code{apparix --shell-examples > text.txt}
+
+Then paste it into \texttt{~/.bashrc}.
+
+Restart console.
+
+Bookmark current directory with \code{bm bookmarkname} and go to the same location with \code{to bookmarkname}
+
+% --------------------------------------------------------------
+% --------------------------------------------------------------
+% --------------------------------------------------------------
+\subsubsection{Compiler \texttt{gcc} \& \texttt{g++}}
+Compiler gcc and g++ installation:
+
+\code{sudo apt install build-essential}
+
+% --------------------------------------------------------------
+% --------------------------------------------------------------
+% --------------------------------------------------------------
+\subsubsection{Debugger \texttt{gdb}}
+
+\code{sudo apt install gdb}
+
+% --------------------------------------------------------------
+% --------------------------------------------------------------
+% --------------------------------------------------------------
+\subsubsection{Git}
+Git installation:
+
+\code{sudo apt install git}
+
+Add credentials that will be asked for later on if not done:
+
+\code{git config --global user.email "your@email.com"}
+
+\code{git config --global user.name "your name"}
+
+Initialize local repository:
+
+\code{git init}
+
+\code{git remote add origin <remote-address>}
+
+Save credentials:
+
+\code{git config credential.helper store}
+
+Get master from remote origin:
+
+\code{git pull origin master}
+
+In order to not have to specify \code{<remote>} and \code{<branch>} in \code{git pull <remote> <branch>}, but still have to do previous pull first:
+
+\code{git branch --set-upstream-to=origin/master master}
+
+\code{git pull}
+
+In order to pull another branch on the remote, firstly fetch the branches:
+
+\code{git fetch}
+
+Then see which branches that are fetched e.g.
+
+\code{* [new branch]\hspace{1.5cm}testing\hspace{0.5cm}-> origin/testing}
+
+Checkout that branch. OBS that you don't have a branch created locally, you will only be checking out the remote branch which may change as soon as you \code{git fetch} again. This is only in order to copy the content of the remote branch into the local one.
+
+\code{git checkout origin/testing}
+
+Create the local copy of the remote branch and go to it:
+
+\code{git checkout -b testing}
+
+Make sure that the local branch have its upstream to the remote one:
+
+\code{git branch --set-upstream-to=origin/testing}
+
+\subsubsection{LaTeX}
+
+Install the complete version TeX Live:
+
+\code{sudo apt install texlive-full}
+
+\subsubsubsection{Minted - Code}
+In order to use the \texttt{minted} package for displaying code one must install \texttt{Pygments} for \texttt{Python}.
+
+If using \texttt{Ubuntu 18.04}:
+
+\code{sudo apt install python-pygments}
+
+If using \texttt{Ubuntu 20.04}:
+
+\code{sudo apt install python3-pygments}
+
+Also, one must use the \code{-shell-escape} flag with the \code{latexmk} (standard compilation) command in order to compile with \texttt{minted}.
+
+In Visual Studio Code, press \texttt{Ctrl + Shift + P} in order to search for commands. Search and execute \code{Preferences: Open settings (JSON)} in order to open up the \texttt{settings.json} file with the compilation recipe. Add \code{"-shell-escape"} to the arguments.
+
+\begin{minted}[tabsize=3,obeytabs,linenos,bgcolor=codegray]{json}
+{
+    "name": "latexmk",
+    "command": "latexmk",
+    "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+    ],
+    "env": {}
+}
+\end{minted}

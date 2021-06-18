@@ -1,0 +1,35 @@
+\subsubsection{Fix directory highlight inconsistency}\label{sec:color_dir_highlight}
+
+Depending if you have created the directories within Ubuntu WSL directly with \code{mkdir} or pulled a directory, which were made within Windows, through some version control system; the background or highlight coloring of these directory may vary.
+
+Probably will the directories made within Windows have another highlight color and this is because these by default have other reading and writing permissions than the ones made within Ubuntu. 
+
+Windows made directories probably have \code{o+w} permission. Enabling others than the user to write to it. This is called "writable by other". The Ubuntu made ones are probably sticky, which means that they have their sticky bit enabled.
+
+We do not want to change permissions in order to change the colors of the directories. Instead we change the colors of the different permissions and make the two have the same colors.
+
+In \code{.bashrc} there are some lines trying to access the file \texttt{\textapprox /.dircolors}. But if you check, there are no such file.
+
+We create it with this command:
+
+\code{dircolors -p > \textapprox/.dircolors}
+
+Then in order to change the colors of the different permissions; find the corresponding keyword and change the numbers. The background color used for the Windows made directories with "writable by other" permission, is set by the variable \code{OTHER\_WRITABLE}. E.g.
+
+\code{OTHER\_WRITABLE 34;42 \# dir that is other-writable (o+w) and not sticky}
+
+It is probably sufficient to copy this value into the \code{DIR} variable. From this
+
+\code{DIR 01;34 \# directory}
+
+to this
+
+\code{DIR 34;42 \# directory}
+
+and it is a good idea to save the default value in a comment
+
+\code{DIR 34;42 \# default 01;34 directory}
+
+It could also be a good idea to copy the value into the variables \code{STICKY\_OTHER\_VARIABLE} and \code{STICKY}.
+
+Restart the terminal.

@@ -1,0 +1,42 @@
+\subsection{VirtualBox Extra Setup}
+\subsubsection{Full-screen}
+\begin{enumerate}
+    \item Start virtual machine.
+    \item Press \texttt{Devices} drop down list in the virtual box window. That is, not inside the virtual machine itself.
+    \item Press \texttt{Insert Guest Additions CD image...}
+    \item A popup in the virtual machine should show: \texttt{... contains software intended to be automatically started. Would you like to run it?} and choose \texttt{Run}.
+    \item Resize the window a little and it will be full-screen.
+\end{enumerate}
+
+\subsubsection{Shared clipboard}
+\begin{enumerate}
+    \item In virtual box settings go to \texttt{General->Advanced} and select \texttt{Bidirectional} for \texttt{Shared Clipboard:} 
+    \item Start virtual machine and see if it is working. If not, continue
+    \item Press \texttt{Devices} drop down list in the virtual box window. That is, not inside the virtual machine itself. Press \texttt{Insert Guest Additions CD image...}
+    \item If an error occurs do the following and then redo it
+    \begin{itemize}
+        \item Unmount VBoxGuestAdditons by \texttt{Devices->Optical Drives->Remove disk from virtual drive}.
+    \end{itemize}
+    \item Reboot the virtual machine.
+    \item If it is not working, continue
+    \item Download and install \textit{Extension pack} from virtual box.
+    \item Reboot the virtual machine.
+    \item If it is not working, try unmount and mount guest additions again.
+\end{enumerate}
+
+\subsubsection{Network setup for server and client IPv4 addresses}
+
+When starting virtual machine: \texttt{Ctrl + Alt + T} for terminal.\\
+Write: \texttt{ip addr show}, check wether ip-address is something like \texttt{192.11.1.24} and not \texttt{10.0.1.1}.\\
+If something with \texttt{10.(...)}, then it is a local IPv4 address and not one from the DHCP of the router. 
+
+Solution: Turn off virtual machine. Go to \(\rightarrow\) Settings \(\rightarrow\) Network and in \texttt{Attached to:} choose \texttt{Bridged Adapter} instead of probably NAT.
+
+Start virtual machine and check if IPv4 address have changed to something like \texttt{192.(...)}.\\
+If you open up a web-browser and don't get a connection, more settings have to be changed.\\
+This probably depends on the virtual machine giving the router one MAC address and the host computer giving another.
+
+Solution: Turn off virtual machine. Go to \(\rightarrow\) Settings \(\rightarrow\) Network and expand \texttt{Advanced}. Remove the MAC address. Then go to the host computer in Windows 10 and open \texttt{CMD}. Write: \texttt{ipconfig /all} and look for the MAC address of the host machine, probably named something like \\\code{Physical Address .............................................. 2C-F0-AF-73-2A-6C}\\
+Input this instead of the old removed MAC address and save. This probably makes you unable to use internet on the host machine instead which one will have to sacrifice.
+
+

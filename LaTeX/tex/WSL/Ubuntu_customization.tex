@@ -1,0 +1,100 @@
+\subsection{WSL Ubuntu Customization}
+\subsubsection{Step-by-step}
+
+\begin{enumerate}
+    \item Download \texttt{git-completion.bash} from this \href{https://github.com/robinhellmers/computer_setup/tree/master/bash_path}{Github} and copy the code.
+    
+    \item Create a new file \code{\textapprox/.git-completion.bash} (with dot to make it hidden) and paste the code into it.
+    
+    \item Use \code{sudo chmod +x \textapprox/.git-completion.bash} in order to give permission to the user to run it through \code{.bashrc}.
+    
+    \item Download \texttt{bashrc\_shorten\_path\_git} from this \href{https://github.com/robinhellmers/computer_setup/tree/master/bash_path}{Github} and copy the code.
+    
+    \item Open up \code{\textapprox/.bashrc} and find the code similar to this and replace it with the copied code.
+\begin{minted}[tabsize=3,obeytabs,bgcolor=codegray]{bash}
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:  ...'
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+\end{minted}
+    
+    
+\end{enumerate}
+
+\subsubsection{Terminal shorten name \& path, add git indication}
+Only this link is needed. The rest below this is the same, Github is used to easily copy the code. Github with \texttt{.bashrc} code and \texttt{git-completion.bash} forked from official Git source code:\\
+\url{https://github.com/robinhellmers/computer_setup}
+
+Use \code{sudo chmod +x \textapprox/git-completion.bash} in order to give permission to the user to run it. Thereby it can run it through \code{./bashrc}
+
+Instructions for git fetched from here:\\
+\url{https://git-scm.com/book/id/v2/Appendix-A\%3A-Git-in-Other-Environments-Git-in-Bash}
+
+Git source code \code{git-completion.bash}. Copy the content of the file from official git and add it to your home folder as \code{git-completion.bash}:\\
+\url{https://github.com/git/git/blob/master/contrib/completion/git-completion.bash}
+
+
+
+\textbf{Add this above the code that is going to be replaced:}
+\begin{minted}[tabsize=3,obeytabs,linenos,bgcolor=codegray]{bash}
+export PROMPT_DIRTRIM=3
+PS1_custom='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:
+\[\033[01;34m\]\w\[\033[00m\]\$ '
+\end{minted}
+
+\textbf{Replace the similar code with this:}
+\begin{minted}[tabsize=3,obeytabs,linenos,bgcolor=codegray]{bash}
+if [ "$color_prompt" = yes ]; then
+    PS1=$PS1_custom
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+\end{minted}
+
+\textbf{Add this below the code that is going to be replaced:}
+\begin{minted}[tabsize=3,obeytabs,linenos,bgcolor=codegray]{bash}
+export GIT_PS1_SHOWCOLORHINTS=true
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWUPSTREAM="auto"
+# PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
+# use existing PS1 settings
+PROMPT_COMMAND=$(sed -r 's|^(.+)(\\\$\s*)$|__git_ps1 "\1" "\2"|' <<< $PS1)
+\end{minted}
+
+\newpage
+\textbf{Here is all of the above:}
+\begin{minted}[tabsize=3,obeytabs,linenos,bgcolor=codegray]{bash}
+export PROMPT_DIRTRIM=3
+PS1_custom='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\
+[\033[01;34m\]\w\[\033[00m\]\$ '
+
+
+if [ "$color_prompt" = yes ]; then
+    PS1=$PS1_custom
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+
+export GIT_PS1_SHOWCOLORHINTS=true
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWUPSTREAM="auto"
+# PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
+# use existing PS1 settings
+PROMPT_COMMAND=$(sed -r 's|^(.+)(\\\$\s*)$|__git_ps1 "\1" "\2"|' <<< $PS1)
+\end{minted}
+
+If something says that permission is denied to the file \code{path\_to\_file/git-completion.bash}. Then run \code{chmod +x path\_to\_file/git-completion.bash} and restart the Ubuntu app.
+
+
+
+
+
+
+

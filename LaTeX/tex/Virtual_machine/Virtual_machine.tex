@@ -1,0 +1,41 @@
+\section{Virtual Machine Setup}
+\subsection{Installation VirtualBox \& Ubuntu 18.04}
+
+\begin{enumerate}
+    \item Download .iso file of Ubuntu 18.04.
+    \item Download and install VirtualBox.
+    \item Create new virtual machine.
+        \begin{enumerate}
+            \item Version: Ubuntu (64-bit); If not showing 64-bit, enable Virtual Machine in BIOS of host machine.
+            \item Next. Memory 4-5 GB if total 8 GB.
+            \item Next. Select \texttt{Create a virtual hard disk now}.
+            \item Create. Select \texttt{VDI}.
+            \item Next. Select \texttt{Dynamical}.
+            \item Next. 20-40 GB size. More towards 40 GB.
+            \item Create. Wait on creating storage. Done.
+        \end{enumerate}
+    \item Settings of virtual machine.
+        \begin{itemize}
+            \item \(\rightarrow\) System \(\rightarrow\) Motherboard; Memory still 4-5 GB.
+            \item \(\rightarrow\) System \(\rightarrow\) Motherboard; Enable I/O APIC
+            \item \(\rightarrow\) System \(\rightarrow\) Processor; 2 CPUs if total of 4 CPUs.
+            \item \(\rightarrow\) Display \(\rightarrow\) Screen; Max graphics memory.
+        \end{itemize}
+    \item Start virtual machine. Should ask for \texttt{start-up disk} where you \texttt{add} the .iso file in \texttt{Optical Disk Selector}. If not showing up follow following:
+        \begin{enumerate}
+            \item Go to settings \(\rightarrow\) Storage.
+            \item Mark sub-group to \texttt{Controller: IDE}.
+            \item Under Attributes \(\rightarrow\) Optical Drive; Press the circular button to the right.
+            \item Select \texttt{Choose/Create a Virtual Optical Disk...}
+            \item Add the .iso file.
+            \item Start virtual machine.
+        \end{enumerate}
+    \item Choose to install Ubuntu.
+    \item Follow the steps and in one of the steps choose \texttt{Erase disk and install Ubuntu}. As this is a virtual machine, nothing will be erased on the host computer.
+\end{enumerate}
+
+\newpage
+\input{tex/Virtual_machine/VirtualBox_setup}
+
+\newpage
+\input{tex/Virtual_machine/Ubuntu_installations}

@@ -1,0 +1,59 @@
+\section{Extra}
+\subsection{Vim Settings}
+
+Create \code{~/.vimrc}.
+
+In order to permanently have numbering in vim/vi/vimdiff, add \code{:set number} into \code{.vimrc}.
+
+\subsection{Change keyboard layout - MicroSoft Keyboard Layout Creator (MSKLC)}
+Download MicroSoft Keyboard Layout Creator (MSKLC):\\
+\url{https://www.microsoft.com/en-us/download/details.aspx?id=102134}
+
+Extract the files and run the installation. If the installation says that \tttbf{.NET Framework} has to be installed, then follow the instructions below.
+
+\begin{enumerate}
+    \item Press \tttbf{Windows + R}.Run \tttbf{appwiz.cpl}.
+    
+    \item Click \tttbf{'Turn Windows features on or off'}.
+    
+    \item Enable \tttbf{.NET Framework 3.5 (includes .NET 2.0 and 3.0)}.
+    
+    \item Follow the on-screen instructions and let Windows install the necessary files.
+    
+    \item Now try to install \tttbf{MSKLC} again.
+\end{enumerate}
+
+Now run \tttbf{Microsoft Keyboard Layout Creator ...}.
+
+\begin{enumerate}
+    \item Click \tttbf{File\ra Load Existing Keyboard} and pick the keyboard which the computer have e.g. \tttbf{Swedish}
+    
+    \item Now save a backup by clicking \tttbf{File\ra Save Source File As...}.
+    
+    \item Now change the name of the current keyboard to avoid saving on the backup after doing the changes. Click \tttbf{Project\ra Properties} and change the name etc. as before but to another name such as \texttt{Custom}.
+    
+    \item Now, do the changes to the keyboard layout as you which.
+    \begin{itemize}
+        \item \{ mapped to \texttt{AltGr + A}
+        
+        \item {[} mapped to \texttt{AltGr + S}
+        
+        \item {]} mapped to \texttt{AltGr + D}
+        
+        \item \} mapped to \texttt{AltGr + F}
+        
+        \item \textbackslash\ mapped to \texttt{AltGr + G}
+    \end{itemize}
+    
+    \item Run the validation by clicking \tttbf{Project\ra Validate Layout} and watch for errors. The warnings can usually be ignored.
+    
+    \item Test write with the layout by clicking \tttbf{Project\ra Test Keyboard Layout}.
+    
+    \item Create the necessary files for the final keyboard layout by clicking \tttbf{Project\ra Build DLL and Setup Package}. When asked about opening the directory where the files were created, click \tttbf{Yes}. Usually created in \tttbf{...\textbackslash Documents}.
+    
+    \item Run the \tttbf{setup} file and restart the computer.
+\end{enumerate}
+
+\subsection{Windows code compare program - Meld}
+Comparing and inserting code. Great when someone sends you a changed file and might want to integrate it into yours.
+\url{https://meldmerge.org/}
