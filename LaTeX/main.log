@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.6.14)  19 JUN 2021 09:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.6.14)  19 JUN 2021 11:31
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -913,23 +913,23 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 \openout7 = `main.toc'.
 
  [2] (/home/hellmers/latex/computer_setup/LaTeX/tex/WSL/WSL.tex (/home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Installation_WSL_with_VSCode.tex
-<Figures/WSL/turn_on_WSL.PNG, id=196, 848.4197pt x 477.28313pt>
+<Figures/WSL/turn_on_WSL.PNG, id=206, 848.4197pt x 477.28313pt>
 File: Figures/WSL/turn_on_WSL.PNG Graphic file (type png)
 <use Figures/WSL/turn_on_WSL.PNG>
 Package pdftex.def Info: Figures/WSL/turn_on_WSL.PNG  used on input line 10.
 (pdftex.def)             Requested size: 469.75502pt x 264.26166pt.
  [3 </home/hellmers/latex/computer_setup/LaTeX/Figures/WSL/turn_on_WSL.PNG>]
-<Figures/WSL/vscode_extensions.PNG, id=216, 465.23813pt x 118.94438pt>
+<Figures/WSL/vscode_extensions.PNG, id=226, 465.23813pt x 118.94438pt>
 File: Figures/WSL/vscode_extensions.PNG Graphic file (type png)
 <use Figures/WSL/vscode_extensions.PNG>
 Package pdftex.def Info: Figures/WSL/vscode_extensions.PNG  used on input line 32.
 (pdftex.def)             Requested size: 328.82707pt x 84.07176pt.
-<Figures/WSL/vscode_compiler.PNG, id=217, 459.21562pt x 73.02281pt>
+<Figures/WSL/vscode_compiler.PNG, id=227, 459.21562pt x 73.02281pt>
 File: Figures/WSL/vscode_compiler.PNG Graphic file (type png)
 <use Figures/WSL/vscode_compiler.PNG>
 Package pdftex.def Info: Figures/WSL/vscode_compiler.PNG  used on input line 44.
 (pdftex.def)             Requested size: 328.82707pt x 52.29112pt.
-<Figures/WSL/vscode_environment_c++.PNG, id=218, 458.46281pt x 94.85437pt>
+<Figures/WSL/vscode_environment_c++.PNG, id=228, 458.46281pt x 94.85437pt>
 File: Figures/WSL/vscode_environment_c++.PNG Graphic file (type png)
 <use Figures/WSL/vscode_environment_c++.PNG>
 Package pdftex.def Info: Figures/WSL/vscode_environment_c++.PNG  used on input line 61.
@@ -974,70 +974,70 @@ runsystem(pygmentize -l json -f latex -P commandprefix=PYG -F tokenmerge -o main
 runsystem(pygmentize -l json -f latex -P commandprefix=PYG -F tokenmerge -o main.out.pyg main.pyg)...executed.
 
  (/home/hellmers/latex/computer_setup/LaTeX/main.out.pyg) [10]) (/home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Ubuntu_terminal_colors.tex [11] (/home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Everything_step_by_step.tex
-<tex/WSL/Ubuntu_terminal_colors/Figures/1.PNG, id=289, 468.24937pt x 370.38374pt>
+<tex/WSL/Ubuntu_terminal_colors/Figures/1.PNG, id=300, 468.24937pt x 370.38374pt>
 File: tex/WSL/Ubuntu_terminal_colors/Figures/1.PNG Graphic file (type png)
 <use tex/WSL/Ubuntu_terminal_colors/Figures/1.PNG>
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/1.PNG  used on input line 63.
 (pdftex.def)             Requested size: 352.31625pt x 278.69702pt.
  [12]
-<tex/WSL/Ubuntu_terminal_colors/Figures/2.PNG, id=317, 467.49657pt x 369.63094pt>
+<tex/WSL/Ubuntu_terminal_colors/Figures/2.PNG, id=328, 467.49657pt x 369.63094pt>
 File: tex/WSL/Ubuntu_terminal_colors/Figures/2.PNG Graphic file (type png)
 <use tex/WSL/Ubuntu_terminal_colors/Figures/2.PNG>
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/2.PNG  used on input line 72.
 (pdftex.def)             Requested size: 352.31625pt x 278.57613pt.
-<tex/WSL/Ubuntu_terminal_colors/Figures/3.PNG, id=318, 467.49657pt x 369.63094pt>
+<tex/WSL/Ubuntu_terminal_colors/Figures/3.PNG, id=329, 467.49657pt x 369.63094pt>
 File: tex/WSL/Ubuntu_terminal_colors/Figures/3.PNG Graphic file (type png)
 <use tex/WSL/Ubuntu_terminal_colors/Figures/3.PNG>
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/3.PNG  used on input line 76.
 (pdftex.def)             Requested size: 352.31625pt x 278.57613pt.
  [13 </home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Figures/1.PNG>]
-<tex/WSL/Ubuntu_terminal_colors/Figures/4.PNG, id=327, 465.99094pt x 367.3725pt>
+<tex/WSL/Ubuntu_terminal_colors/Figures/4.PNG, id=338, 465.99094pt x 367.3725pt>
 File: tex/WSL/Ubuntu_terminal_colors/Figures/4.PNG Graphic file (type png)
 <use tex/WSL/Ubuntu_terminal_colors/Figures/4.PNG>
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/4.PNG  used on input line 82.
 (pdftex.def)             Requested size: 352.31625pt x 277.76534pt.
  [14 </home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Figures/2.PNG> </home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Figures/3.PNG>]
-<tex/WSL/Ubuntu_terminal_colors/Figures/5.PNG, id=335, 464.4853pt x 365.86688pt>
+<tex/WSL/Ubuntu_terminal_colors/Figures/5.PNG, id=346, 464.4853pt x 365.86688pt>
 File: tex/WSL/Ubuntu_terminal_colors/Figures/5.PNG Graphic file (type png)
 <use tex/WSL/Ubuntu_terminal_colors/Figures/5.PNG>
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/5.PNG  used on input line 88.
 (pdftex.def)             Requested size: 352.31625pt x 277.52019pt.
-<tex/WSL/Ubuntu_terminal_colors/Figures/6.PNG, id=336, 466.74374pt x 368.1253pt>
+<tex/WSL/Ubuntu_terminal_colors/Figures/6.PNG, id=347, 466.74374pt x 368.1253pt>
 File: tex/WSL/Ubuntu_terminal_colors/Figures/6.PNG Graphic file (type png)
 <use tex/WSL/Ubuntu_terminal_colors/Figures/6.PNG>
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/6.PNG  used on input line 94.
 (pdftex.def)             Requested size: 352.31625pt x 277.88516pt.
  [15 </home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Figures/4.PNG> </home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Figures/5.PNG>]
-<tex/WSL/Ubuntu_terminal_colors/Figures/7.PNG, id=344, 464.4853pt x 368.1253pt>
+<tex/WSL/Ubuntu_terminal_colors/Figures/7.PNG, id=355, 464.4853pt x 368.1253pt>
 File: tex/WSL/Ubuntu_terminal_colors/Figures/7.PNG Graphic file (type png)
 <use tex/WSL/Ubuntu_terminal_colors/Figures/7.PNG>
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/7.PNG  used on input line 100.
 (pdftex.def)             Requested size: 352.31625pt x 279.23328pt.
  [16 </home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Figures/6.PNG>]
-<tex/WSL/Ubuntu_terminal_colors/Figures/8.PNG, id=352, 466.74374pt x 368.1253pt>
+<tex/WSL/Ubuntu_terminal_colors/Figures/8.PNG, id=363, 466.74374pt x 368.1253pt>
 File: tex/WSL/Ubuntu_terminal_colors/Figures/8.PNG Graphic file (type png)
 <use tex/WSL/Ubuntu_terminal_colors/Figures/8.PNG>
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/8.PNG  used on input line 106.
 (pdftex.def)             Requested size: 352.31625pt x 277.88516pt.
-<tex/WSL/Ubuntu_terminal_colors/Figures/9.PNG, id=353, 466.74374pt x 368.87813pt>
+<tex/WSL/Ubuntu_terminal_colors/Figures/9.PNG, id=364, 466.74374pt x 368.87813pt>
 File: tex/WSL/Ubuntu_terminal_colors/Figures/9.PNG Graphic file (type png)
 <use tex/WSL/Ubuntu_terminal_colors/Figures/9.PNG>
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/9.PNG  used on input line 112.
 (pdftex.def)             Requested size: 352.31625pt x 278.45343pt.
  [17 </home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Figures/7.PNG> </home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Figures/8.PNG>]
-<tex/WSL/Ubuntu_terminal_colors/Figures/10.PNG, id=361, 398.23781pt x 352.31625pt>
+<tex/WSL/Ubuntu_terminal_colors/Figures/10.PNG, id=372, 398.23781pt x 352.31625pt>
 File: tex/WSL/Ubuntu_terminal_colors/Figures/10.PNG Graphic file (type png)
 <use tex/WSL/Ubuntu_terminal_colors/Figures/10.PNG>
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/10.PNG  used on input line 118.
 (pdftex.def)             Requested size: 352.31625pt x 311.70041pt.
  [18 </home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Figures/9.PNG>]
-<tex/WSL/Ubuntu_terminal_colors/Figures/11.PNG, id=369, 465.23813pt x 368.1253pt>
+<tex/WSL/Ubuntu_terminal_colors/Figures/11.PNG, id=380, 465.23813pt x 368.1253pt>
 File: tex/WSL/Ubuntu_terminal_colors/Figures/11.PNG Graphic file (type png)
 <use tex/WSL/Ubuntu_terminal_colors/Figures/11.PNG>
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/11.PNG  used on input line 126.
 (pdftex.def)             Requested size: 352.31625pt x 278.7839pt.
  [19 </home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Figures/10.PNG>]
-<tex/WSL/Ubuntu_terminal_colors/Figures/12.PNG, id=378, 463.7325pt x 368.1253pt>
+<tex/WSL/Ubuntu_terminal_colors/Figures/12.PNG, id=389, 463.7325pt x 368.1253pt>
 File: tex/WSL/Ubuntu_terminal_colors/Figures/12.PNG Graphic file (type png)
 <use tex/WSL/Ubuntu_terminal_colors/Figures/12.PNG>
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/12.PNG  used on input line 132.
@@ -1047,18 +1047,18 @@ File: tex/WSL/Ubuntu_terminal_colors/Figures/11.PNG Graphic file (type png)
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/11.PNG  used on input line 138.
 (pdftex.def)             Requested size: 352.31625pt x 278.7839pt.
  [20 </home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Figures/11.PNG> </home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Figures/12.PNG>]
-<tex/WSL/Ubuntu_terminal_colors/Figures/13.PNG, id=386, 464.4853pt x 367.3725pt>
+<tex/WSL/Ubuntu_terminal_colors/Figures/13.PNG, id=397, 464.4853pt x 367.3725pt>
 File: tex/WSL/Ubuntu_terminal_colors/Figures/13.PNG Graphic file (type png)
 <use tex/WSL/Ubuntu_terminal_colors/Figures/13.PNG>
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/13.PNG  used on input line 144.
 (pdftex.def)             Requested size: 352.31625pt x 278.66223pt.
-<tex/WSL/Ubuntu_terminal_colors/Figures/14.PNG, id=387, 466.74374pt x 366.61969pt>
+<tex/WSL/Ubuntu_terminal_colors/Figures/14.PNG, id=398, 466.74374pt x 366.61969pt>
 File: tex/WSL/Ubuntu_terminal_colors/Figures/14.PNG Graphic file (type png)
 <use tex/WSL/Ubuntu_terminal_colors/Figures/14.PNG>
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/14.PNG  used on input line 150.
 (pdftex.def)             Requested size: 352.31625pt x 276.74863pt.
  [21 </home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Figures/13.PNG>]
-<tex/WSL/Ubuntu_terminal_colors/Figures/15.PNG, id=395, 436.63126pt x 354.57469pt>
+<tex/WSL/Ubuntu_terminal_colors/Figures/15.PNG, id=406, 436.63126pt x 354.57469pt>
 File: tex/WSL/Ubuntu_terminal_colors/Figures/15.PNG Graphic file (type png)
 <use tex/WSL/Ubuntu_terminal_colors/Figures/15.PNG>
 Package pdftex.def Info: tex/WSL/Ubuntu_terminal_colors/Figures/15.PNG  used on input line 156.
@@ -1088,61 +1088,61 @@ Overfull \hbox (52.97533pt too wide) in paragraph at lines 18--19
  []
 
 ) [24] (/home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Color_properties_tool.tex
-<Figures/WSL/color_example.PNG, id=433, 241.65282pt x 39.89906pt>
+<Figures/WSL/color_example.PNG, id=445, 241.65282pt x 39.89906pt>
 File: Figures/WSL/color_example.PNG Graphic file (type png)
 <use Figures/WSL/color_example.PNG>
 Package pdftex.def Info: Figures/WSL/color_example.PNG  used on input line 14.
 (pdftex.def)             Requested size: 187.89914pt x 31.02493pt.
-<Figures/WSL/color_prompt.PNG, id=434, 367.3725pt x 368.1253pt>
+<Figures/WSL/color_prompt.PNG, id=446, 367.3725pt x 368.1253pt>
 File: Figures/WSL/color_prompt.PNG Graphic file (type png)
 <use Figures/WSL/color_prompt.PNG>
 Package pdftex.def Info: Figures/WSL/color_prompt.PNG  used on input line 19.
 (pdftex.def)             Requested size: 281.85587pt x 282.45189pt.
-<Figures/WSL/color_prompt_2.PNG, id=435, 367.3725pt x 369.63094pt>
+<Figures/WSL/color_prompt_2.PNG, id=447, 367.3725pt x 369.63094pt>
 File: Figures/WSL/color_prompt_2.PNG Graphic file (type png)
 <use Figures/WSL/color_prompt_2.PNG>
 Package pdftex.def Info: Figures/WSL/color_prompt_2.PNG  used on input line 24.
 (pdftex.def)             Requested size: 281.85587pt x 283.6071pt.
  [25 </home/hellmers/latex/computer_setup/LaTeX/Figures/WSL/color_example.PNG> </home/hellmers/latex/computer_setup/LaTeX/Figures/WSL/color_prompt.PNG>]
-<Figures/WSL/color_prompt_3.PNG, id=449, 370.38374pt x 370.38374pt>
+<Figures/WSL/color_prompt_3.PNG, id=460, 370.38374pt x 370.38374pt>
 File: Figures/WSL/color_prompt_3.PNG Graphic file (type png)
 <use Figures/WSL/color_prompt_3.PNG>
 Package pdftex.def Info: Figures/WSL/color_prompt_3.PNG  used on input line 29.
 (pdftex.def)             Requested size: 281.85587pt x 281.85626pt.
-<Figures/WSL/color_prompt_4.PNG, id=450, 361.35pt x 371.88937pt>
+<Figures/WSL/color_prompt_4.PNG, id=461, 361.35pt x 371.88937pt>
 File: Figures/WSL/color_prompt_4.PNG Graphic file (type png)
 <use Figures/WSL/color_prompt_4.PNG>
 Package pdftex.def Info: Figures/WSL/color_prompt_4.PNG  used on input line 34.
 (pdftex.def)             Requested size: 281.85587pt x 290.07822pt.
  [26 </home/hellmers/latex/computer_setup/LaTeX/Figures/WSL/color_prompt_2.PNG> </home/hellmers/latex/computer_setup/LaTeX/Figures/WSL/color_prompt_3.PNG>]
-<Figures/WSL/color_example_2.PNG, id=458, 240.9pt x 40.65187pt>
+<Figures/WSL/color_example_2.PNG, id=469, 240.9pt x 40.65187pt>
 File: Figures/WSL/color_example_2.PNG Graphic file (type png)
 <use Figures/WSL/color_example_2.PNG>
 Package pdftex.def Info: Figures/WSL/color_example_2.PNG  used on input line 39.
 (pdftex.def)             Requested size: 187.89914pt x 31.70894pt.
  [27 </home/hellmers/latex/computer_setup/LaTeX/Figures/WSL/color_prompt_4.PNG> </home/hellmers/latex/computer_setup/LaTeX/Figures/WSL/color_example_2.PNG>]
-<Figures/WSL/color_1.PNG, id=477, 246.9225pt x 97.11281pt>
+<Figures/WSL/color_1.PNG, id=488, 246.9225pt x 97.11281pt>
 File: Figures/WSL/color_1.PNG Graphic file (type png)
 <use Figures/WSL/color_1.PNG>
 Package pdftex.def Info: Figures/WSL/color_1.PNG  used on input line 68.
 (pdftex.def)             Requested size: 187.89914pt x 73.89836pt.
-<Figures/WSL/color_2.PNG, id=478, 246.1697pt x 92.59593pt>
+<Figures/WSL/color_2.PNG, id=489, 246.1697pt x 92.59593pt>
 File: Figures/WSL/color_2.PNG Graphic file (type png)
 <use Figures/WSL/color_2.PNG>
 Package pdftex.def Info: Figures/WSL/color_2.PNG  used on input line 73.
 (pdftex.def)             Requested size: 187.89914pt x 70.68022pt.
-<Figures/WSL/color_3.PNG, id=479, 246.9225pt x 95.6072pt>
+<Figures/WSL/color_3.PNG, id=490, 246.9225pt x 95.6072pt>
 File: Figures/WSL/color_3.PNG Graphic file (type png)
 <use Figures/WSL/color_3.PNG>
 Package pdftex.def Info: Figures/WSL/color_3.PNG  used on input line 78.
 (pdftex.def)             Requested size: 187.89914pt x 72.75266pt.
 ) [28 </home/hellmers/latex/computer_setup/LaTeX/Figures/WSL/color_1.PNG> </home/hellmers/latex/computer_setup/LaTeX/Figures/WSL/color_2.PNG> </home/hellmers/latex/computer_setup/LaTeX/Figures/WSL/color_3.PNG>] (/home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Color_directory_highlight.tex) [29] (/home/hellmers/latex/computer_setup/LaTeX/tex/WSL/Ubuntu_terminal_colors/Color_vimdiff.tex
-<Figures/WSL/colors_vimdiff_defualt.PNG, id=492, 504.38437pt x 85.82062pt>
+<Figures/WSL/colors_vimdiff_defualt.PNG, id=503, 504.38437pt x 85.82062pt>
 File: Figures/WSL/colors_vimdiff_defualt.PNG Graphic file (type png)
 <use Figures/WSL/colors_vimdiff_defualt.PNG>
 Package pdftex.def Info: Figures/WSL/colors_vimdiff_defualt.PNG  used on input line 11.
 (pdftex.def)             Requested size: 469.75502pt x 79.92888pt.
-<Figures/WSL/colors_vimdiff_customized.PNG, id=493, 514.92375pt x 87.32625pt>
+<Figures/WSL/colors_vimdiff_customized.PNG, id=504, 514.92375pt x 87.32625pt>
 File: Figures/WSL/colors_vimdiff_customized.PNG Graphic file (type png)
 <use Figures/WSL/colors_vimdiff_customized.PNG>
 Package pdftex.def Info: Figures/WSL/colors_vimdiff_customized.PNG  used on input line 18.
@@ -1152,7 +1152,7 @@ Package pdftex.def Info: Figures/WSL/colors_vimdiff_customized.PNG  used on inpu
 runsystem(pygmentize -l bash -f latex -P commandprefix=PYG -F tokenmerge -o main.out.pyg main.pyg)...executed.
 
  (/home/hellmers/latex/computer_setup/LaTeX/main.out.pyg)
-<Figures/WSL/xterm256_color_table.png, id=495, 903.375pt x 638.385pt>
+<Figures/WSL/xterm256_color_table.png, id=506, 903.375pt x 638.385pt>
 File: Figures/WSL/xterm256_color_table.png Graphic file (type png)
 <use Figures/WSL/xterm256_color_table.png>
 Package pdftex.def Info: Figures/WSL/xterm256_color_table.png  used on input line 40.
@@ -1163,7 +1163,7 @@ Package pdftex.def Info: Figures/WSL/xterm256_color_table.png  used on input lin
 runsystem(pygmentize -l vim -f latex -P commandprefix=PYG -F tokenmerge -o main.out.pyg main.pyg)...executed.
 
  (/home/hellmers/latex/computer_setup/LaTeX/main.out.pyg)
-<Figures/WSL/colors_demo.PNG, id=513, 119.69719pt x 397.485pt>
+<Figures/WSL/colors_demo.PNG, id=524, 119.69719pt x 397.485pt>
 File: Figures/WSL/colors_demo.PNG Graphic file (type png)
 <use Figures/WSL/colors_demo.PNG>
 Package pdftex.def Info: Figures/WSL/colors_demo.PNG  used on input line 61.
@@ -1226,7 +1226,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F7E3DECD4839AD1C49CDB2E79EF7695D;2763.
+(rerunfilecheck)             Checksum: 3ED84B0964571A050A975D45F108843C;2964.
 runsystem(rm main.pyg)...executed.
 
 runsystem(rm main.out.pyg)...executed.
@@ -1234,18 +1234,18 @@ runsystem(rm main.out.pyg)...executed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
  ) 
 Here is how much of TeX's memory you used:
- 12135 strings out of 492982
- 196651 string characters out of 6134896
+ 12139 strings out of 492982
+ 196751 string characters out of 6134896
  318113 words of memory out of 5000000
- 15161 multiletter control sequences out of 15000+600000
+ 15163 multiletter control sequences out of 15000+600000
  15904 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,7n,32p,1018b,628s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfit1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on /home/hellmers/latex/computer_setup/LaTeX/main.pdf (40 pages, 838611 bytes).
+Output written on /home/hellmers/latex/computer_setup/LaTeX/main.pdf (40 pages, 839764 bytes).
 PDF statistics:
- 724 PDF objects out of 1000 (max. 8388607)
- 600 compressed objects within 6 object streams
- 239 named destinations out of 1000 (max. 500000)
- 441 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 737 PDF objects out of 1000 (max. 8388607)
+ 612 compressed objects within 7 object streams
+ 241 named destinations out of 1000 (max. 500000)
+ 457 words of extra memory for PDF output out of 10000 (max. 10000000)
 
