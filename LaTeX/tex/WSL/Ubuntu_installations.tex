@@ -117,6 +117,8 @@ Also, one must use the \code{-shell-escape} flag with the \code{latexmk} (standa
 
 In Visual Studio Code, press \texttt{Ctrl + Shift + P} in order to search for commands. Search and execute \code{Preferences: Open settings (JSON)} in order to open up the \texttt{settings.json} file with the compilation recipe. Add \code{"-shell-escape"} to the arguments.
 
+If the file is empty, use the \texttt{settings.json} from \href{https://github.com/robinhellmers/computer_setup/blob/master/latex-workshop/settings.json}{Github}.
+
 \begin{minted}[tabsize=3,obeytabs,linenos,bgcolor=codegray]{json}
 {
     "name": "latexmk",
@@ -133,3 +135,8 @@ In Visual Studio Code, press \texttt{Ctrl + Shift + P} in order to search for co
     "env": {}
 }
 \end{minted}
+
+If there there is an error message similar to \code{Undefined control sequence. \textbackslash PYG \#1\#2->\textbackslash FV\(@\)PYG},\\
+add the argument \code{cache=false} when loading the \code{minted} package. 
+
+\code{\textbackslash usepackage[cache=false]\{minted\}}
