@@ -60,9 +60,21 @@ Initialize local repository:
 
 \code{git init}
 
+\subsubsubsection{Username and password for remote}
+
+Credentials for e.g. \textbf{Github} are stored in \texttt{\textapprox/.git-credentials} as
+
+\code{https://username:password@example.com}\\
+
+Which with \textbf{Github} and a token instead of password could be:
+
+\code{https://robinhellmers:generatedtoken@github.com}
+
+\subsubsubsection{Adding remote}
+
 \code{git remote add origin <remote-address>}
 
-Save credentials:
+Save credentials to \texttt{.git-credentials}:
 
 \code{git config credential.helper store}
 
