@@ -7,6 +7,27 @@ Start with:
 % --------------------------------------------------------------
 % --------------------------------------------------------------
 % --------------------------------------------------------------
+\subsubsection{Remove files with possibility to restore - \texttt{trash-cli} package}
+
+Usually when using the \code{rm} command, it is very hard to restore what has been removed. By using this package, a trashbin is being used before removing permanently.
+
+\begin{enumerate}
+    \item Install the \code{trash-cli} package with \code{sudo apt install trash-cli}
+    \item Then set the alias \code{alias rm=trash} in your \code{\textapprox /.bashrc} file.
+\end{enumerate}
+
+
+The \code{trash-cli} package comes with some commands:
+\begin{itemize}
+    \item \code{trash} - Which is like \code{rm} but it will be put in a trashbin instead
+    \item \code{trash-list} - Lists everything in the trashbin
+    \item \code{restore-trash} - Lists and numbers everything in the trashbin. Asks for an index from the list to restore.
+    \item \code{trash-empty} - Permanently remove everything in the trashbin.
+\end{itemize}
+
+% --------------------------------------------------------------
+% --------------------------------------------------------------
+% --------------------------------------------------------------
 \subsubsection{Terminal bookmark directories}
 Install \texttt{Apparix} (Doc. \url{https://www.micans.org/apparix/}) with\\
 \code{sudo apt-get install apparix}
@@ -108,12 +129,47 @@ Make sure that the local branch have its upstream to the remote one:
 
 \code{git branch --set-upstream-to=origin/testing}
 
-\subsubsubsection{Git log - .gitconfig}
+\subsubsubsection{View commit history - Short command}
 
-In order to have a good git history tree visualization in the terminal, use the \texttt{.gitignore} from \href{https://github.com/robinhellmers/computer_setup/blob/master/git_setup/gitconfig}{Github}. This gives three different commands:\\
+In order to have a good git history tree visualization in the terminal, use the \texttt{.gitconfig} from \href{https://github.com/robinhellmers/computer_setup/blob/master/git_setup/gitconfig}{Github}. This gives three different commands:\\
 \code{git lg}\\
 \code{git lg2}\\
 \code{git lg3}
+
+\subsubsubsection{Apply .gitignore by removing already committed files - Short command}
+
+\textbf{NOTE:} \textit{This will remove the files from remote repo and thereby remove the files from other computers.}
+
+Show the files which currently apply to the \texttt{.gitignore}:
+
+\code{git ls-files -ci --exclude-standard}
+
+Have a command which 
+\begin{enumerate}
+    \item Looks up the \texttt{.gitignore} files
+    \item Removes them locally
+    \item Stages the changes (add): the removed files
+\end{enumerate}
+
+Add this line to \texttt{.gitconfig} under \code{[alias]} in order to have a short command:
+
+\code{apply-gitignore-remove = !git ls-files -ci --exclude-standard -z | xargs -0 git rm --cached}
+
+Called with:
+
+\code{git apply-gitignore-remove}
+
+Then commit the removed files.\\
+
+
+\subsubsubsection{Ignore already committed file - Short command}
+
+\code{apply-ignore = git update-index --skip-worktree}
+
+Called with:
+
+\code{git apply-ignore <file>}
+
 
 \subsubsection{LaTeX}
 
