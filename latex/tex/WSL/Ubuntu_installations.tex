@@ -91,7 +91,35 @@ Which with \textbf{Github} and a token instead of password could be:
 
 \code{https://robinhellmers:generatedtoken@github.com}
 
-\subsubsubsection{Adding remote}
+\subsubsubsection{Adding Github remote - SSH}
+
+Create SSH keys by entering a passphrase connected to the SSH keys, after running:
+
+\code{ssh-keygen -f \textapprox/.ssh/id\_ecdsa -t ecdsa -b 521}
+
+Copy the public key, that is all of the content in \code{id\_ecdsa.pub}. If in WSL Ubuntu, copy the content with:
+
+\code{clip.exe < \textapprox/.ssh/id\_ecdsa.pub}
+
+Go to \href{Github}{github.com}, then:
+
+\texttt{Settings \textrightarrow\ SSH and GPG keys \textrightarrow\ Add copied public key}
+
+In Ubuntu, run the \code{ssh-agent} with the command:
+
+\code{eval "\$(ssh-agent -s)"}
+
+Add the SSH keys to the \code{ssh-agent} by entering the passphrase after:
+
+\code{ssh-add \textapprox/.ssh/id\_ecdsa}
+
+Now you can clone a repo:
+
+\code{git clone git@github.com:<username>/<reponame>.git}
+
+Say yes to the fingerprint.
+
+\subsubsubsection{Adding remote - https://}
 
 \code{git remote add origin <remote-address>}
 
