@@ -241,6 +241,65 @@ Install the complete version TeX Live:
 
 \code{sudo apt install texlive-full}
 
+\subsubsubsection{Latex Workshop}
+
+\begin{minted}[tabsize=3,obeytabs,linenos,bgcolor=codegray]{latex}
+    "latex-workshop.view.pdf.viewer": "browser",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+            "latexmk"
+            ]
+        },
+        {
+            "name": "pdflatex - bibtex - pdflatex x2",
+            "tools": [
+            "pdflatex",
+            "bibtex",
+            "pdflatex",
+            "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-pdf",
+            "-shell-escape",
+            "-outdir=%OUTDIR%",
+            "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+            "%DOCFILE%"
+            ],s
+            "env": {}
+        }
+    ]
+\end{minted}
+
 \subsubsubsection{Minted - Code}
 In order to use the \texttt{minted} package for displaying code one must install \texttt{Pygments} for \texttt{Python}.
 
