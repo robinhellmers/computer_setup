@@ -4,9 +4,9 @@ Start with:
 
 \code{sudo apt update}
 
-% --------------------------------------------------------------
-% --------------------------------------------------------------
-% --------------------------------------------------------------
+% -{}-------------------------------------------------------------
+% -{}-------------------------------------------------------------
+% -{}-------------------------------------------------------------
 \subsubsection{Remove files with possibility to restore - \texttt{trash-cli} package}
 
 Usually when using the \code{rm} command, it is very hard to restore what has been removed. By using this package, a trashbin is being used before removing permanently.
@@ -25,22 +25,22 @@ The \code{trash-cli} package comes with some commands:
     \item \code{trash-empty} - Permanently remove everything in the trashbin.
 \end{itemize}
 
-% --------------------------------------------------------------
-% --------------------------------------------------------------
-% --------------------------------------------------------------
+% -{}-------------------------------------------------------------
+% -{}-------------------------------------------------------------
+% -{}-------------------------------------------------------------
 \subsubsection{Terminal bookmark directories}
 Install \texttt{Apparix} (Doc. \url{https://www.micans.org/apparix/}) with\\
 \code{sudo apt-get install apparix}
 
 Run \code{apparix} in order for it to set up its folders.
 
-Then write \code{apparix --shell-examples} and copy everything except the aliases at the bottom. Paste this in \texttt{~/.bashrc}
+Then write \code{apparix -{}-shell-examples} and copy everything except the aliases at the bottom. Paste this in \texttt{~/.bashrc}
 
 If just copying from the terminal and pasting into \texttt{~/.bashrc} doesn't work, create a file and let the output be written into that instead in order to copy from it.
 
 \code{touch text.txt}
 
-\code{apparix --shell-examples > text.txt}
+\code{apparix -{}-shell-examples > text.txt}
 
 Then paste it into \texttt{~/.bashrc}.
 
@@ -48,24 +48,24 @@ Restart console.
 
 Bookmark current directory with \code{bm bookmarkname} and go to the same location with \code{to bookmarkname}
 
-% --------------------------------------------------------------
-% --------------------------------------------------------------
-% --------------------------------------------------------------
+% -{}-------------------------------------------------------------
+% -{}-------------------------------------------------------------
+% -{}-------------------------------------------------------------
 \subsubsection{Compiler \texttt{gcc} \& \texttt{g++}}
 Compiler gcc and g++ installation:
 
 \code{sudo apt install build-essential}
 
-% --------------------------------------------------------------
-% --------------------------------------------------------------
-% --------------------------------------------------------------
+% -{}-------------------------------------------------------------
+% -{}-------------------------------------------------------------
+% -{}-------------------------------------------------------------
 \subsubsection{Debugger \texttt{gdb}}
 
 \code{sudo apt install gdb}
 
-% --------------------------------------------------------------
-% --------------------------------------------------------------
-% --------------------------------------------------------------
+% -{}-------------------------------------------------------------
+% -{}-------------------------------------------------------------
+% -{}-------------------------------------------------------------
 \subsubsection{Git}
 Git installation:
 
@@ -73,9 +73,9 @@ Git installation:
 
 Add credentials that will be asked for later on if not done:
 
-\code{git config --global user.email "your@email.com"}
+\code{git config -{}-global user.email "your@email.com"}
 
-\code{git config --global user.name "your name"}
+\code{git config -{}-global user.name "your name"}
 
 Initialize local repository:
 
@@ -105,7 +105,7 @@ Get master from remote origin:
 
 In order to not have to specify \code{<remote>} and \code{<branch>} in \code{git pull <remote> <branch>}, but still have to do previous pull first:
 
-\code{git branch --set-upstream-to=origin/master master}
+\code{git branch -{}-set-upstream-to=origin/master master}
 
 \code{git pull}
 
@@ -127,7 +127,7 @@ Create the local copy of the remote branch and go to it:
 
 Make sure that the local branch have its upstream to the remote one:
 
-\code{git branch --set-upstream-to=origin/testing}
+\code{git branch -{}-set-upstream-to=origin/testing}
 
 \subsubsubsection{View commit history - Short command}
 
@@ -142,7 +142,7 @@ In order to have a good git history tree visualization in the terminal, use the 
 
 Show the files which currently apply to the \texttt{.gitignore}:
 
-\code{git ls-files -ci --exclude-standard}
+\code{git ls-files -ci -{}-exclude-standard}
 
 Have a command which 
 \begin{enumerate}
@@ -153,7 +153,7 @@ Have a command which
 
 Add this line to \texttt{.gitconfig} under \code{[alias]} in order to have a short command:
 
-\code{apply-gitignore-remove = !git ls-files -ci --exclude-standard -z | xargs -0 git rm --cached}
+\code{apply-gitignore-remove = !git ls-files -ci -{}-exclude-standard -z | xargs -0 git rm -{}-cached}
 
 Called with:
 
@@ -164,7 +164,7 @@ Then commit the removed files.\\
 
 \subsubsubsection{Ignore already committed file - Short command}
 
-\code{apply-ignore = git update-index --skip-worktree}
+\code{apply-ignore = git update-index -{}-skip-worktree}
 
 Called with:
 
