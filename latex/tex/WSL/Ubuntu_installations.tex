@@ -91,7 +91,35 @@ Which with \textbf{Github} and a token instead of password could be:
 
 \code{https://robinhellmers:generatedtoken@github.com}
 
-\subsubsubsection{Adding remote}
+\subsubsubsection{Adding Github remote - SSH}
+
+Create SSH keys by entering a passphrase connected to the SSH keys, after running:
+
+\code{ssh-keygen -f \textapprox/.ssh/id\_ecdsa -t ecdsa -b 521}
+
+Copy the public key, that is all of the content in \code{id\_ecdsa.pub}. If in WSL Ubuntu, copy the content with:
+
+\code{clip.exe < \textapprox/.ssh/id\_ecdsa.pub}
+
+Go to \href{www.github.com}{Github}, then:
+
+\texttt{Settings \textrightarrow\ SSH and GPG keys \textrightarrow\ Add copied public key}
+
+In Ubuntu, run the \code{ssh-agent} with the command:
+
+\code{eval "\$(ssh-agent -s)"}
+
+Add the SSH keys to the \code{ssh-agent} by entering the passphrase after:
+
+\code{ssh-add \textapprox/.ssh/id\_ecdsa}
+
+Now you can clone a repo:
+
+\code{git clone git@github.com:<username>/<reponame>.git}
+
+Say yes to the fingerprint.
+
+\subsubsubsection{Adding remote - https://}
 
 \code{git remote add origin <remote-address>}
 
@@ -155,7 +183,7 @@ Add this line to \texttt{.gitconfig} under \code{[alias]} in order to have a sho
 
 \code{apply-gitignore-remove = !git ls-files -ci -{}-exclude-standard -z | xargs -0 git rm -{}-cached}
 
-Called with:
+Called with: 
 
 \code{git apply-gitignore-remove}
 
@@ -170,12 +198,107 @@ Called with:
 
 \code{git apply-ignore <file>}
 
+\subsubsubsection{Multiple users}
+
+One might want to have multiple users, e.g. one for work with the work email and a private with private email.
+
+As standard, when doing the commands:\\
+\code{git config --global user.name}\\
+\code{git config --global user.email}
+
+It created the default user to the \code{\textapprox/.gitconfig} by appending
+\begin{minted}[tabsize=3,obeytabs,bgcolor=codegray]{text}
+[user]
+    name = <Your name>
+    email = <Your email>
+\end{minted}
+
+You can create another local configuration file \code{\textapprox/<pathToNewGitDirectory>/.gitconfig}, with the other user:
+\begin{minted}[tabsize=3,obeytabs,bgcolor=codegray]{text}
+[user]
+    name = <Other name>
+    email = <Other email>
+\end{minted}
+
+Open up \code{\textapprox/.gitconfig} and add \code{[includeIf ...]} with your new git configuration file path replaced:
+\begin{minted}[tabsize=3,obeytabs,bgcolor=codegray]{text}
+[includeIf "gitdir:~/<pathToNewGitDirectory>/"]
+    path = ~/<pathToNewGitDirectory>/.gitconfig
+\end{minted}
+
+If you are in that directory or any sub-directory specified, your user will be \code{Other name} with \code{Other email}. Verify this by going to that specified path and type:
+
+\begin{minted}[tabsize=3,obeytabs,bgcolor=codegray]{text}
+git config user.name
+git config user.email
+\end{minted}
+
+
 
 \subsubsection{LaTeX}
 
 Install the complete version TeX Live:
 
 \code{sudo apt install texlive-full}
+
+\subsubsubsection{Latex Workshop}
+
+\begin{minted}[tabsize=3,obeytabs,linenos,bgcolor=codegray]{latex}
+    "latex-workshop.view.pdf.viewer": "browser",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+            "latexmk"
+            ]
+        },
+        {
+            "name": "pdflatex - bibtex - pdflatex x2",
+            "tools": [
+            "pdflatex",
+            "bibtex",
+            "pdflatex",
+            "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-pdf",
+            "-shell-escape",
+            "-outdir=%OUTDIR%",
+            "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+            "%DOCFILE%"
+            ],s
+            "env": {}
+        }
+    ]
+\end{minted}
 
 \subsubsubsection{Minted - Code}
 In order to use the \texttt{minted} package for displaying code one must install \texttt{Pygments} for \texttt{Python}.

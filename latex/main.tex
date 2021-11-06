@@ -1,4 +1,6 @@
 \documentclass{article}
+
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{parskip}
@@ -17,14 +19,25 @@
 \input{tex/extra_latex/subsubsubsectioning}
 %%% ---------------- %%%
 
+%%% Prevent double dash (--) becoming long hyphen - %%%
+
+
 %%% Codes %%%
 \usepackage{color}
 \usepackage[cache=false]{minted}                  
     \definecolor{bg}{rgb}{0.97,0.97,0.97}
     
 \definecolor{codegray}{gray}{0.9}
-\newcommand{\code}[1]{\colorbox{codegray}{\texttt{#1}}}
+% \newcommand{\code}[1]{\colorbox{codegray}{\texttt{#1}}}
+\newcommand{\code}[1]{\mintinline[bgcolor=codegray]{text}{#1}}
+
 %%% ----- %%%
+
+%%% Links %%%
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.8}
+\newcommand{\link}[2]{{\href{#1}{\textbf{\color{darkblue}#2}}}}
+\newcommand{\refsection}[2]{{\hyperref[#1]{\textbf{\color{darkblue}#2}}}}
+
 \usepackage{bold-extra}
     \newcommand{\tttbf}[1]{\texttt{\textbf{#1}}} % requires package bold-extra
 \usepackage{textcomp}
@@ -56,7 +69,7 @@
 \input{tex/Python}
 \input{tex/Extra}
 
-%\input{tex/Appendix.tex}
+\input{tex/Appendix.tex}
 
 \end{document}
 
