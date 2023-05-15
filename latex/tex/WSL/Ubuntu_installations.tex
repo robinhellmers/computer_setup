@@ -13,7 +13,7 @@ Usually when using the \code{rm} command, it is very hard to restore what has be
 
 \begin{enumerate}
     \item Install the \code{trash-cli} package with \code{sudo apt install trash-cli}
-    \item Then set the alias \code{alias rm=trash} in your \code{\textapprox /.bashrc} file.
+    \item Then set the alias \code{alias rm=trash} in your \code{~ /.bashrc} file.
 \end{enumerate}
 
 
@@ -95,11 +95,11 @@ Which with \textbf{Github} and a token instead of password could be:
 
 Create SSH keys by entering a passphrase connected to the SSH keys, after running:
 
-\code{ssh-keygen -f \textapprox/.ssh/id\_ecdsa -t ecdsa -b 521}
+\code{ssh-keygen -f ~/.ssh/id\_ecdsa -t ecdsa -b 521}
 
 Copy the public key, that is all of the content in \code{id\_ecdsa.pub}. If in WSL Ubuntu, copy the content with:
 
-\code{clip.exe < \textapprox/.ssh/id\_ecdsa.pub}
+\code{clip.exe < ~/.ssh/id\_ecdsa.pub}
 
 Go to \href{www.github.com}{Github}, then:
 
@@ -111,7 +111,7 @@ In Ubuntu, run the \code{ssh-agent} with the command:
 
 Add the SSH keys to the \code{ssh-agent} by entering the passphrase after:
 
-\code{ssh-add \textapprox/.ssh/id\_ecdsa}
+\code{ssh-add ~/.ssh/id\_ecdsa}
 
 Now you can clone a repo:
 
@@ -206,21 +206,21 @@ As standard, when doing the commands:\\
 \code{git config --global user.name}\\
 \code{git config --global user.email}
 
-It created the default user to the \code{\textapprox/.gitconfig} by appending
+It created the default user to the \code{~/.gitconfig} by appending
 \begin{minted}[tabsize=3,obeytabs,bgcolor=codegray]{text}
 [user]
     name = <Your name>
     email = <Your email>
 \end{minted}
 
-You can create another local configuration file \code{\textapprox/<pathToNewGitDirectory>/.gitconfig}, with the other user:
+You can create another local configuration file \code{~/<pathToNewGitDirectory>/.gitconfig}, with the other user:
 \begin{minted}[tabsize=3,obeytabs,bgcolor=codegray]{text}
 [user]
     name = <Other name>
     email = <Other email>
 \end{minted}
 
-Open up \code{\textapprox/.gitconfig} and add \code{[includeIf ...]} with your new git configuration file path replaced:
+Open up \code{~/.gitconfig} and add \code{[includeIf ...]} with your new git configuration file path replaced:
 \begin{minted}[tabsize=3,obeytabs,bgcolor=codegray]{text}
 [includeIf "gitdir:~/<pathToNewGitDirectory>/"]
     path = ~/<pathToNewGitDirectory>/.gitconfig
