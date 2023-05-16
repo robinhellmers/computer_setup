@@ -81,7 +81,7 @@ This \texttt{Makefile} is based on the following structure.
     \item All \texttt{.h} header files in \texttt{include}.
 \end{itemize}
 
-\begin{minted}[tabsize=3,obeytabs,linenos,bgcolor=codegray]{make}
+\begin{minted}{make}
 CC := gcc
 CFLAGS := -pthread -g
 
@@ -127,7 +127,7 @@ After creating one for the specific project, continue with the \textbf{Visual St
         \item The label \code{"label": "build"} can be changed to any other, which will be used in the debugger config file \texttt{launch.json} later on. Same label will appear as a dropdown list later on.
     \end{itemize}
     
-\begin{minted}[tabsize=3,obeytabs,linenos,bgcolor=codegray]{json}
+\begin{minted}{json}
 {
     "version": "2.0.0",
     "tasks": [
@@ -166,7 +166,7 @@ After creating one for the specific project, continue with the \textbf{Visual St
         \item Set which program to debug with\\\code{"program": "\$\{workspaceFolder\}/bin/\$\{fileBasenameNoExtension\}.out"}.\\This must be adjusted according to the \texttt{Makefile} and where it saves its executable file. Remember to adjust the file ending according to what the \texttt{Makefile} outputs.
     \end{itemize}
     
-\begin{minted}[tabsize=3,obeytabs,linenos,bgcolor=codegray]{json}
+\begin{minted}{json}
 {
     "version": "0.2.0",
     "configurations": [
@@ -217,7 +217,7 @@ Now when debugging and the debugger quits the program, there will always be an e
         \item The letters and numbers after \code{glibc-...} must be adjusted to the error message that pops up when the debugger is quitting the program.
     \end{itemize}
     
-\begin{minted}[tabsize=3,obeytabs,linenos,bgcolor=codegray]{json}
+\begin{minted}{json}
 {
     "sourceFileMap": {
         "/build/glibc-2ORdQG": "/usr/src/glibc"

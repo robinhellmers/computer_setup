@@ -243,7 +243,10 @@ Install the complete version TeX Live:
 
 \subsubsubsection{Latex Workshop}
 
-\begin{minted}[tabsize=3,obeytabs,linenos,bgcolor=codegray]{latex}
+% [samepage=false] as the following error is thrown  when it cannot be contained
+% in a single page:
+% TeX capacity exceeded, sorry [input stack size=5000].
+\begin{minted}[samepage=false]{json}
     "latex-workshop.view.pdf.viewer": "browser",
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.latex.recipes": [
@@ -294,11 +297,12 @@ Install the complete version TeX Live:
             "command": "bibtex",
             "args": [
             "%DOCFILE%"
-            ],s
+            ],
             "env": {}
         }
     ]
 \end{minted}
+
 
 \subsubsubsection{Minted - Code}
 In order to use the \texttt{minted} package for displaying code one must install \texttt{Pygments} for \texttt{Python}.
@@ -317,7 +321,7 @@ In Visual Studio Code, press \texttt{Ctrl + Shift + P} in order to search for co
 
 If the file is empty, use the \texttt{settings.json} from \href{https://github.com/robinhellmers/computer_setup/blob/master/latex-workshop/settings.json}{Github}.
 
-\begin{minted}[tabsize=3,obeytabs,linenos,bgcolor=codegray]{json}
+\begin{minted}{json}
 {
     "name": "latexmk",
     "command": "latexmk",
